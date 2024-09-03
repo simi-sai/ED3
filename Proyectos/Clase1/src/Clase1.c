@@ -1,6 +1,6 @@
 /*
 ===============================================================================
- Name        : Ejercicio 1
+ Name        : Ejemplo Clase 1
  Author      : Simon Saillen
  Version     : 1
  Copyright   : $(copyright)
