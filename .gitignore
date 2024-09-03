@@ -1,4 +1,9 @@
-Datasheets/
+Documentos/
 .vscode/
-.mcuxpressoide_packages_support/
-.metadata/
+Proyectos/*/.settings
+Proyectos/*/.project
+Proyectos/*/int/
+Proyectos/*/.cproject
+Proyectos/*/Debug/
+Proyectos/*/src/crp.c
+Proyectos/*/src/cr_startup_lpc175x_6x.c
