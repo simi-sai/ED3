@@ -1,7 +1,7 @@
 /*
 ===============================================================================
  Name        : Ejemplo Clase 1
- Author      : Simon Saillen
+ Author      : $(author)
  Version     : 1
  Copyright   : $(copyright)
  Description : main definition
