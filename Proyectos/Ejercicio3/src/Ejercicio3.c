@@ -24,17 +24,17 @@ int main(void) {
 
 		if(aux == 0) {
 			acumulador += (LPC_GPIO0->FIOPIN & 0xF);
-		} else {
+		} else if(aux == 1) {
 			acumulador -= (LPC_GPIO0->FIOPIN & 0xF);
 		}
 
 		delay(1000);
 	}
-    return 0 ;
+    return 0;
 }
 
 void config_ports(void) {
-	LPC_PINCON->PINSEL0 |= ~(0b11111); // GPIO P0.0 a P0.4
+	LPC_PINCON->PINSEL0 &= ~(0x3FF);   // GPIO P0.0 a P0.4
 	LPC_PINCON->PINMODE0 |= (3 << 8);  // PULL-DOWN P0.4
 
 	LPC_GPIO0->FIODIR &= ~(0x1F);      // P0.0 a P0.4 entradas
@@ -43,7 +43,7 @@ void config_ports(void) {
 
 /* Lee el valor del pin P0.4 */
 uint8_t fetch(void) {
-	uint8_t temp = LPC_GPIO0->FIOPIN & (1 << 5);
+	uint8_t temp = LPC_GPIO0->FIOPIN & (1 << 4);
 
 	return temp;
 }
